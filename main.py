@@ -14,10 +14,12 @@ class VehicleDetect:
 
 
     def dataCapture(self):
-        ret, frame = self.cap.read()
-        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        cars = self.face_cascade.detectMultiScale(gray, 1.3, 5)
-        data = len(cars)
-        return data
+        data = 0
+        for _ in range(10):
+            ret, frame = self.cap.read()
+            gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+            cars = self.face_cascade.detectMultiScale(gray, 1.3, 5)
+            data += len(cars)
+        return data/10
 
 
