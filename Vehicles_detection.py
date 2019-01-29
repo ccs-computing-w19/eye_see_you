@@ -3,8 +3,9 @@
 import cv2
  
 # capture frames from a video
-cap = cv2.VideoCapture('video.avi')
- 
+cap = cv2.VideoCapture('ccsbuildingvid.avi')
+cap.set(3, 640) #WIDTH
+cap.set(4, 480) #HEIGHT
 # Trained XML classifiers describes some features of some object we want to detect
 car_cascade = cv2.CascadeClassifier('cars.xml')
  
@@ -18,7 +19,7 @@ while True:
      
  
     # Detects cars of different sizes in the input image
-    cars = car_cascade.detectMultiScale(gray, 1.1, 1)
+    cars = car_cascade.detectMultiScale(gray, 1.1, 6)
     print(len(cars))
     # To draw a rectangle in each cars
     for (x,y,w,h) in cars:
