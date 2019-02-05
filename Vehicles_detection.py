@@ -3,7 +3,8 @@
 import cv2
 
 # capture frames from a video
-cap = cv2.VideoCapture('ccsbuilding-no-span.mp4')
+#cap = cv2.VideoCapture('ccsbuilding-no-span.mp4')
+cap = cv2.VideoCapture(0)
 cap.set(3, 640) #WIDTH
 cap.set(4, 480) #HEIGHT
 # Trained XML classifiers describes some features of some object we want to detect
@@ -20,7 +21,7 @@ while True:
     gray = cv2.cvtColor(frames, cv2.COLOR_BGR2GRAY)
 
     # Detects cars of different sizes in the input image
-    cars = car_cascade.detectMultiScale(gray, 1.1, 3, 0, (300,300))
+    cars = car_cascade.detectMultiScale(gray, 1.1, 3, 0, (100,100))
     #print(len(cars))
 
     # CALCULATE AVERAGE NUMBER OF CARS EVERY 10 FRAMES
