@@ -1,0 +1,9 @@
+#video-stream {
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}

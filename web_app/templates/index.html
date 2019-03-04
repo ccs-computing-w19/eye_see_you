@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet" type="text/css"></link>
+        <title>CCS Parking</title>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                  <a class="navbar-brand">College of Creative Studies Parking</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li ><a href="#">About</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <h1> CCS Back Parking Lot Stream </h1>
+            <image id="video-stream" src="{{ url_for('video_feed') }}">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">Lot Information</div>
+                <div class="panel-body">Number of Spots: 8</div>
+                <div class="panel-body">Available Spots: COMING SOON</div>
+            </div>
+
+        </div>
+    </body>
+
+</html>
