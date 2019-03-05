@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet" type="text/css"></link>
+        <title>CCS Parking</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                  <a class="navbar-brand">College of Creative Studies Parking</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li class="active"><a href="{{ url_for('about') }}">About</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="panel panel-default">
+                <div class="panel-heading">CCS Parking Spot Detection</div>
+                <div class="panel-body">
+                    This website was created for CCS Computing 1L by Jared Fitton and Akshay Heda.
+                    The goal of this project was to allow faculty and staff of CCS to
+                    determine if there are parking spots open behind the CCS building.
+                    We would like to thank Professor Conrad for all his help in guiding this project.
+                </div>
+                <div class="panel-body">
+                    This project was built using python, OpenCV, flask, and html/css. Future ambitions for this project include
+                    detection of the amount of cars present using computervision, push notifications and historical data.
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">Contact</div>
+                <div class="panel-body">
+                    For feature requests and feedback please feel free to reach out to us! <br/>
+                    <br/>Jared Fitton: jaredfitton@ucsb.edu<br/>
+                    <br/>Akshay Heda: akshayheda@ucsb.edu
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
